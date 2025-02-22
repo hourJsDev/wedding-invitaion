@@ -32,7 +32,7 @@ const Navbar = () => {
       icon: <IoIosImages />,
     },
   ];
-  return (
+  return !["", "/", "/dashboard"].includes(pathname) ? (
     <ul className="flex justify-between bg-blue-950 text-[white] py-[13px] rounded-t-[30px] fixed w-[95%] left-[50%] -translate-x-[50%] bottom-0 rounded-b-[15px] px-[10px]">
       {menu.map((m, index) => (
         <Link to={`/${m.label.replaceAll(" ", "-").toLowerCase()}`}>
@@ -52,7 +52,7 @@ const Navbar = () => {
         </Link>
       ))}
     </ul>
-  );
+  ) : null;
 };
 
 export default Navbar;

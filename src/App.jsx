@@ -7,6 +7,7 @@ import Map from "./page/Map.jsx";
 import Home from "./page/Home.jsx";
 import OurStory from "./page/OurStory.jsx";
 import Gallery from "./page/Gallery.jsx";
+import Dashboard from "./page/Dashboard.jsx";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const App = () => {
         {
           path: "gallery",
           element: <Gallery />,
+        },
+        {
+          path: "dashboard",
+          element: <Dashboard />,
         },
       ],
     },
