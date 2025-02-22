@@ -9,7 +9,7 @@ const Dashboard = () => {
     setSelected(uuid);
     setTimeout(() => {
       setSelected("");
-    }, 1000);
+    }, 1500);
     navigator.clipboard.writeText(window.location.origin + "/?uuid=" + uuid);
   };
   return (
@@ -33,11 +33,15 @@ const Dashboard = () => {
         ).map((d, index) => (
           <li
             key={d.name}
-            className="flex shadow-sm py-[10px] px-[10px] justify-between"
+            className="flex hover:bg-slate-50 shadow-sm py-[10px] px-[10px] justify-between"
           >
             <span>{d.name}</span>
             <span onClick={() => handleSelect(d.uuid)} className=" text-[18px]">
-              {selected === d.uuid ? <FaRegCheckCircle /> : <MdContentCopy />}
+              {selected === d.uuid ? (
+                <FaRegCheckCircle className="text-green-500" />
+              ) : (
+                <MdContentCopy />
+              )}
             </span>
           </li>
         ))}
