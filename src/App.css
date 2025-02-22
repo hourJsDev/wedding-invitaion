@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+* {
+  font-family: "Quicksand", serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* color: black; */
+}
+
+.fadeIn {
+  animation: fadeIn 0.7s ease forwards;
+}
+img {
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+body {
+  /* background: url(/public/background.jpg); */
+  background: radial-gradient(
+    circle,
+    rgb(255 192 237) 35%,
+    rgb(243 218 235) 100%
+  );
+
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
