@@ -9,12 +9,12 @@ const OurStory = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="w-full  h-[50dvh]"
+        className="w-full fadeIn  h-[50dvh]"
       >
         {/* <img className="w-full object-cover h-full" src="/images/second-img.jpg" alt="" /> */}
       </div>
       <div
-        className="w-full top-0 absolute h-[50dvh] left-0"
+        className="w-full  top-0 absolute h-[50dvh] left-0"
         style={{
           background: "url(/images/torn.jpeg)",
           backgroundSize: "cover",
@@ -23,9 +23,16 @@ const OurStory = () => {
         }}
       ></div>
       <div className="bg-white px-[20px] -translate-y-[50px]">
-        <h1 className="text-[25px] font-bold">Our First Meet</h1>
-        <p className="text-[#ff1399]">30th July 2021</p>
-        <p>
+        <h1
+          style={{ "--delay": ".3s" }}
+          className="text-[25px] fadeIn font-bold"
+        >
+          Our First Meet
+        </h1>
+        <p style={{ "--delay": ".5s" }} className="text-[#ff1399] fadeIn">
+          30th July 2021
+        </p>
+        <p style={{ "--delay": ".7s" }} className="fadeIn">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
           mollitia, voluptatem, repellat placeat id consectetur exercitationem
           ipsum, atque sunt eius omnis repellendus officiis suscipit ut tempora

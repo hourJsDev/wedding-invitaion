@@ -1,23 +1,34 @@
 import { useState, useEffect } from "react";
-
+import Image from "../component/Image";
 const Home = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-[50px]">
-      <div>
-        <h1 className="text-[40px] mt-[50px]  text-[#08113f] font-bold">Hing & Lady</h1>
+      <div className="fadeIn">
+        <h1 className="text-[40px] mt-[20px]  text-[#08113f] font-bold">
+          Hing & Lady
+        </h1>
         <p className="text-center text-[#08113f] text-[20px]">
           are getting married in
         </p>
       </div>
-      <div className="w-[350px] h-[350px] rounded-full overflow-hidden border-4 border-[gold]">
-        <img
+      <div
+        style={{ "--delay": ".3s" }}
+        className="w-[350px] fadeIn h-[350px] rounded-full overflow-hidden border-4 border-[gold]"
+      >
+        <Image
           className="w-full h-full object-cover"
-          src={"/images/main-img.JPG"}          alt=""
+          src={"/images/main-img.JPG"}
+          alt=""
         />
       </div>
-      <div className="flex flex-col items-center gap-[40px]">
+      <div
+        style={{ "--delay": ".5s" }}
+        className="flex fadeIn flex-col items-center gap-[40px]"
+      >
         <Countdown />
-        <p className="text-[18px] text-[#ff2989] font-bold">on 30th July 2025 at 12:30</p>
+        <p className="text-[18px] text-[#ff2989] font-bold">
+          on 30th July 2025 at 12:30
+        </p>
       </div>
     </div>
   );
