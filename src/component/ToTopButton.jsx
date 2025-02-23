@@ -20,7 +20,7 @@ const ToTopButton = () => {
   return isVisible ? (
     <div
       onClick={handleClick}
-      className="fixed cursor-pointer right-[30px] bottom-[60px] text-[30px]"
+      className="fixed cursor-pointer right-[30px] bottom-[100px] text-[30px]"
     >
       <TfiArrowCircleUp />
     </div>

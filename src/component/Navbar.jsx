@@ -33,7 +33,7 @@ const Navbar = () => {
     },
   ];
   return !["", "/", "/dashboard"].includes(pathname) ? (
-    <ul className="flex justify-between bg-blue-950 text-[white] py-[13px] rounded-t-[30px] fixed w-[95%] left-[50%] -translate-x-[50%] bottom-0 rounded-b-[15px] px-[10px]">
+    <ul className="flex justify-between bg-blue-950 text-[white] py-[10px] rounded-t-[30px] fixed w-[95%] left-[50%] -translate-x-[50%] bottom-0 rounded-b-[15px] px-[10px]">
       {menu.map((m, index) => (
         <Link to={`/${m.label.replaceAll(" ", "-").toLowerCase()}`}>
           <li
@@ -46,7 +46,7 @@ const Navbar = () => {
             }`}
             key={index}
           >
-            <span className="text-[30px]">{m.icon}</span>
+            <span className="text-[20px]">{m.icon}</span>
             <span className="text-[12px]">{m.label}</span>
           </li>
         </Link>

@@ -8,6 +8,9 @@ import Home from "./page/Home.jsx";
 import OurStory from "./page/OurStory.jsx";
 import Gallery from "./page/Gallery.jsx";
 import Dashboard from "./page/Dashboard.jsx";
+import Timeline from "./page/Timeline.jsx";
+import GalleryLayout from "./component/GalleryLayout.jsx";
+import GalleryDetail from "./page/GalleryDetail.jsx";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -37,11 +40,25 @@ const App = () => {
         },
         {
           path: "gallery",
-          element: <Gallery />,
+          element: <GalleryLayout />,
+          children: [
+            {
+              index: true,
+              element: <Gallery />,
+            },
+            {
+              path: ":id",
+              element: <GalleryDetail />,
+            },
+          ],
         },
         {
           path: "dashboard",
           element: <Dashboard />,
+        },
+        {
+          path: "timeline",
+          element: <Timeline />,
         },
       ],
     },

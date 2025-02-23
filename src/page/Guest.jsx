@@ -17,9 +17,9 @@ const Guest = () => {
     setGuest(selectedGuest);
   }, []);
   return (
-    <div className="flex justify-center flex-col gap-[10px] items-center h-[100dvh]">
+    <div className="flex justify-center flex-col gap-[40px] items-center h-[100dvh]">
       <h2 className="text-[25px]">Welcome</h2>
-      <h1 className="text-[35px] font-bold">{guest}</h1>
+      <h1 className="text-[25px] font-bold">{guest}</h1>
       <Link to={"/home"}>
         <button className="border text-[25px] border-[black] rounded-md py-[5px] px-[30px]">
           Continue

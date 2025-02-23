@@ -129,6 +129,7 @@ body {
   opacity: 0;
   transform: translateY(10px);
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;

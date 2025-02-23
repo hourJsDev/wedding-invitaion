@@ -24,7 +24,7 @@ const Dashboard = () => {
           required
         />
       </div>
-      <ul className="flex w-[95%] mx-auto flex-col gap-[10px]">
+      <ul className="flex w-[95%] mt-[30px] mx-auto flex-col gap-[10px]">
         {(search
           ? data.filter((d) =>
               d.name.toLowerCase().includes(search.toLowerCase())
