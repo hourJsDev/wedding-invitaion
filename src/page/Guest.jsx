@@ -20,7 +20,7 @@ const Guest = () => {
   return (
     <div
       style={{
-        background: "url(/images/pp-p1/pp-p1-18.jpg)",
+        background: "url(/images/pp-p2/pp-p2-4.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -29,7 +29,7 @@ const Guest = () => {
       <div
         style={{
           background:
-            "linear-gradient(to top, rgba(0,0,0,0.7533206831119544)  7%, rgba(0,0,0,0.10246679316888041) 100%)",
+            "linear-gradient(to top, rgba(0,0,0,0.7533206831119544)  40%, rgba(0,0,0,0.10246679316888041) 100%)",
         }}
         className="w-full h-full absolute top-0 left-0"
       ></div>
