@@ -40,23 +40,32 @@ const Guest = () => {
         />
       </div> */}
       <div className=" px-[20px] text-[white] absolute top-[50%]">
-        {/* <h2 className="text-[25px]">Welcome to Our Wedding!</h2> */}
-        <h2 className="text-[28px]">
-          Welcome, <br /> {guest}!{" "}
-        </h2>
-        <p className=" mt-[10px]">
-          We are so happy to have you be a part of our special day! Your
-          presence means the world to us, and we can’t wait to celebrate this
-          beautiful moment together. Join us as we begin this new chapter,
-          surrounded by love, laughter, and the people we cherish most. See you
-          soon! With love.
-        </p>
-        <div className="flex justify-end mt-[30px]">
-          <Link to={"/home"}>
-            <button className="border text-[16px] border-white py-[5px] px-[30px]">
-              Next
-            </button>
-          </Link>
+        <div className="relative">
+          {/* <h2 className="text-[25px]">Welcome to Our Wedding!</h2> */}
+          <h2 className="text-[28px]">
+            Welcome, <br /> {guest}!{" "}
+            <img
+              className="absolute top-[-30px] left-[80px]"
+              src="/images/love-animation.gif"
+              alt="sfsdf"
+            />
+          </h2>
+          <p className=" mt-[10px]">
+            We are so happy to have you be a part of our special day! Your
+            presence means the world to us, and we can’t wait to celebrate this
+            beautiful moment together. Join us as we begin this new chapter,
+            surrounded by love, laughter, and the people we cherish most. See
+            you soon! With love.
+          </p>
+
+          <div className="flex flex-col items-end">
+            <img width={50} className="mr-[20px]" src="/images/arrow.gif.gif" />
+            <Link to={"/home"}>
+              <button className="border text-[16px] border-white py-[5px] px-[30px]">
+                Next
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
