@@ -21,7 +21,7 @@ const Layout = () => {
     <div className="h-[100dvh]">
       <Outlet />
       <ToTopButton />
-      <Navbar />
+      {/* <Navbar /> */}
     </div>
   );
 };

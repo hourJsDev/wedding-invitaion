@@ -25,15 +25,12 @@ img {
 }
 body {
   /* background: url(/public/background.jpg); */
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle,
     rgb(255 192 237) 35%,
     rgb(243 218 235) 100%
-  );
-
-  background-position: 0 0;
-  background-size: cover;
-  background-repeat: no-repeat;
+  ); */
+  background-color: black;
 }
 
 .pulsate {

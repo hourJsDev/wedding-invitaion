@@ -51,11 +51,10 @@ const Guest = () => {
             />
           </h2>
           <p className=" mt-[10px]">
-            We are so happy to have you be a part of our special day! Your
-            presence means the world to us, and we can’t wait to celebrate this
-            beautiful moment together. Join us as we begin this new chapter,
-            surrounded by love, laughter, and the people we cherish most. See
-            you soon! With love.
+            We are excited to share with you the most special day of our lives.
+            With love and happiness, we would like to invite you to join our
+            wedding which will be held on 15th to 16th March 2025. Your presence
+            will make our day even more special and memorable.
           </p>
 
           <div className="flex flex-col items-end">
@@ -68,6 +67,21 @@ const Guest = () => {
           </div>
         </div>
       </div>
+      {/* <img className="absolute bottom-0 left-[-30px]" width={180} src="/images/flower-animation.gif" alt="" />
+      <img className="absolute bottom-0 left-0 z-20" width={80} src="/images/flower-animation.gif" alt="" />
+      <img className="absolute bottom-0 left-[50px] z-20" width={80} src="/images/flower-animation.gif" alt="" /> */}
+      <img
+        src="/images/flower-animation-2.gif"
+        className="left-0 top-0 absolute"
+        width={150}
+        alt=""
+      />
+      <img
+        src="/images/flower-animation-2.gif"
+        className="right-0  top-0 absolute scale-x-[-1]"
+        width={150}
+        alt=""
+      />
     </div>
   );
 };
