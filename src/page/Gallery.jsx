@@ -4,8 +4,8 @@ import { Link } from "react-router";
 import gallery from "../db/gallery";
 const Gallery = () => {
   return (
-    <div className="p-[20px] bg-[#222] h-full text-white">
-      <h1 className="text-[30px]">Gallery</h1>
+    <div className="px-[20px]  h-full text-white">
+      <h1 className="text-[30px] text-center">Gallery</h1>
       <div className="flex flex-col flex-wrap mt-[30px] gap-[30px] justify-between">
         {gallery.map((g, index) => (
           <Link to={"/gallery/" + g.key}>

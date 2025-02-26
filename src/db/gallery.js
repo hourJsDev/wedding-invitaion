@@ -3,7 +3,7 @@ const gallery = [
     location: "Siam Riap",
     name: "Outfits 1",
     key: "sr",
-    length: 10,
+    length: 20,
     image: "/images/sr/1.jpg",
   },
   {

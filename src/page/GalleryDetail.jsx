@@ -1,15 +1,21 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { FaAngleLeft } from "react-icons/fa";
 import Image from "../component/Image";
 import { Link, useParams } from "react-router";
 import gallery from "../db/gallery";
 const GalleryDetail = () => {
   const { id } = useParams();
+  const [loading, setLoading] = useState(true);
   const images = useMemo(() => {
     return gallery.find((g) => g.key === id);
   }, [id]);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
   return (
-    <div className=" bg-[#222] ">
+    <div className="pb-[20px]">
       <div className="text-white flex justify-between items-center px-[10px]">
         <h1 className="text-[18px] py-[20px]">
           {images.name} / {images.location}
@@ -23,7 +29,9 @@ const GalleryDetail = () => {
       <div className="flex flex-col gap-[10px]">
         {[...Array(images.length - 1).keys()].map((_, index) => (
           <div className="">
-            <p className="text-white text-center mb-[5px]">{++index}</p>
+            <p className="text-white text-center mb-[10px]">
+              Photo No.{++index}
+            </p>
             <Image
               className="w-full object-contain h-full"
               src={`/images/${images.key}/${++index}.jpg`}
@@ -31,6 +39,11 @@ const GalleryDetail = () => {
           </div>
         ))}
       </div>
+      {!!loading && (
+        <div className="w-full  h-full fixed bg-[#001207] flex justify-center items-center top-0">
+          <span class="loader"></span>
+        </div>
+      )}
     </div>
   );
 };

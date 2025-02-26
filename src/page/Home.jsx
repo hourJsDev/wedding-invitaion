@@ -6,9 +6,9 @@ import OurStory from "./OurStory";
 import Gallery from "./Gallery";
 const Home = () => {
   return (
-    <div className="flex flex-col gap-[50px]">
+    <div className="flex fadeIn flex-col gap-[50px]">
       <div
-        className="h-[100dvh] uppercase text-[white]"
+        className="h-[100dvh] relative uppercase text-[white]"
         style={{
           background:
             "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(/images/pp/1.jpg)",
@@ -68,7 +68,8 @@ const Home = () => {
           <Countdown />
         </div>
         <img
-          className="absolute pointer-events-none left-[50%] translate-x-[-50%] bottom-[10px]"
+          onClick={() => window.scrollTo({ top: 9999999, behavior: "smooth" })}
+          className="absolute  left-[50%] translate-x-[-50%] bottom-[10px]"
           src="/images/arrow.gif.gif"
           width={60}
           alt=""
@@ -108,13 +109,13 @@ const Countdown = ({ targetDate = "2025-03-15" }) => {
     <ul className="flex mt-[20px]">
       {Object.keys(timeLeft).map((k, index) => (
         <li
-          className={`flex flex-col w-[80px] items-center ${
+          className={`flex flex-col w-[90px] items-center ${
             index < 3 &&
             "relative before:absolute before:w-[1px] before:bg-white before:h-[80%] before:top-0 before:right-0"
           }`}
         >
           <span>{timeLeft[k]}</span>
-          <span>{k}s</span>
+          <span className="text-[10px]">{k}s</span>
         </li>
       ))}
     </ul>

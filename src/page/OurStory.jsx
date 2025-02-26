@@ -3,15 +3,14 @@ import React from "react";
 const OurStory = () => {
   return (
     <div className="text-white overflow-x-hidden mt-[-4px] relative">
-      <div className="w-full fadeIn  h-[50dvh]">
+      <div className=" fadeIn ">
         <img
-          className="w-full object-cover h-full"
+          className="w-full object-contain h-full"
           src="/images/sr/our-story.jpg"
           alt=""
         />
       </div>
-      <div className="w-full  top-0 absolute h-[50dvh] left-0"></div>
-      <div className=" px-[20px]  flex flex-col gap-[10px] ">
+      <div className=" px-[20px] mt-[30px] flex flex-col gap-[10px] ">
         <div className="flex items-center ">
           <span className="text-[25px] translate-y-1">Our love story</span>
           <div className="w-[100px]">
