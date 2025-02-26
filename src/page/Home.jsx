@@ -11,7 +11,7 @@ const Home = () => {
         className="h-[100dvh] uppercase text-[white]"
         style={{
           background:
-            "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(/images/pp-p2/pp-p2-5.jpg)",
+            "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(/images/pp/1.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -20,7 +20,7 @@ const Home = () => {
           <h1 className="text-center text-[white] text-[25px] ">
             THE WEDDING OF
           </h1>
-          <div className="flex px-[10px] justify-between">
+          <div className="flex mt-[10px] px-[10px] justify-between">
             <div>
               <h2 className="text-[18px]">
                 <span className="text-[15px]">Groom's name</span>
@@ -38,7 +38,7 @@ const Home = () => {
           </div>
         </div>
         <div className="pt-[20px]">
-          <h1 className="text-center text-[white] text-[25px] ">OUR FAMILY</h1>
+          <h1 className="text-center text-[white] text-[23px] ">OUR FAMILY</h1>
           <div className="flex px-[10px] justify-between">
             <div>
               <h2 className="text-[18px]">
@@ -49,21 +49,22 @@ const Home = () => {
               <h2 className="text-[18px] mt-[10px]">
                 <span className="text-[15px]">Mother's name</span>
                 <br />
-                CHHUT SOKHOM
+                CHAN LAI
               </h2>
             </div>
             <div className="text-right">
               <h2 className="text-[18px]">
                 <span className="text-[15px]">Mother's name</span>
                 <br />
-                CHAN LAI
+                CHHUT SOKHOM
               </h2>
             </div>
           </div>
         </div>
 
         <div className="flex w-full absolute bottom-[200px] justify-center flex-col items-center gap-[10px]">
-          <h2 className="text-[20px]">Save the date</h2>
+          <h2 className="text-[18px]">Save the date</h2>
+          <h2 className="text-[20px]">15th March 2025</h2>
           <Countdown />
         </div>
         <img
@@ -76,7 +77,7 @@ const Home = () => {
       <Timeline />
       <OurStory />
       <Map />
-      <Gallery/>
+      <Gallery />
     </div>
   );
 };
@@ -104,7 +105,7 @@ const Countdown = ({ targetDate = "2025-03-15" }) => {
     return () => clearInterval(timer);
   }, [targetDate]);
   return (
-    <ul className="flex">
+    <ul className="flex mt-[20px]">
       {Object.keys(timeLeft).map((k, index) => (
         <li
           className={`flex flex-col w-[80px] items-center ${

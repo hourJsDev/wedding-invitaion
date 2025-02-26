@@ -4,18 +4,16 @@ import { Link } from "react-router";
 import gallery from "../db/gallery";
 const Gallery = () => {
   return (
-    <div id="galley" className="p-[20px] h-full text-white">
+    <div className="p-[20px] bg-[#222] h-full text-white">
       <h1 className="text-[30px]">Gallery</h1>
       <div className="flex flex-col flex-wrap mt-[30px] gap-[30px] justify-between">
         {gallery.map((g, index) => (
           <Link to={"/gallery/" + g.key}>
-            <div
-              // style={{ "--delay": `.${((index + 2) * 100) / 100}s` }}
-              className="w-[300px] relative mx-auto h-[300px] fadeIn shadow-md ]  bg-white"
-            >
+            <div className="w-[300px] relative mx-auto h-[300px] fadeIn shadow-md ]  bg-white">
               <div className="w-full h-full  ">
                 <Image
-                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "0 0" }}
+                  className="w-full  h-full object-cover"
                   src={g.image}
                   alt=""
                 />

@@ -1,6 +1,6 @@
 const agenda = [
   {
-    text: "Day 1",
+    text: "15th March 2025",
     agenda: [
       {
         text: "ក្រុងពាលី",
@@ -21,7 +21,7 @@ const agenda = [
     ],
   },
   {
-    text: "Day 2",
+    text: "16th March 2025",
     agenda: [
       {
         text: "ហែជំនូន",

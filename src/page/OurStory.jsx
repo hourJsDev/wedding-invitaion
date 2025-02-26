@@ -6,7 +6,7 @@ const OurStory = () => {
       <div className="w-full fadeIn  h-[50dvh]">
         <img
           className="w-full object-cover h-full"
-          src="/images/pp-p2/pp-p2-7.jpg"
+          src="/images/sr/our-story.jpg"
           alt=""
         />
       </div>

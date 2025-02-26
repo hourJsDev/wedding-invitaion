@@ -4,7 +4,7 @@ const Timeline = () => {
   return (
     <div className="text-white flex flex-col gap-[20px] px-[10px]">
       <h1 className="text-center fadeIn text-[25px]  ">
-        Timeline
+        AGENDA
       </h1>
       {agenda.map((ag) => (
         <div key={ag.text}>
