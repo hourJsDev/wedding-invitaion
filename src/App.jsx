@@ -42,10 +42,7 @@ const App = () => {
           path: "gallery",
           element: <GalleryLayout />,
           children: [
-            {
-              index: true,
-              element: <Gallery />,
-            },
+           
             {
               path: ":id",
               element: <GalleryDetail />,

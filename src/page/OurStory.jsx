@@ -3,20 +3,25 @@ import React from "react";
 const OurStory = () => {
   return (
     <div className="text-white overflow-x-hidden mt-[-4px] relative">
-      <div
-        style={{
-          background: "url(/images/second-img.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="w-full fadeIn  h-[50dvh]"
-      >
-        
-        <img className="w-full object-cover h-full" src="/images/second-img.jpg" alt="" />
+      <div className="w-full fadeIn  h-[50dvh]">
+        <img
+          className="w-full object-cover h-full"
+          src="/images/pp-p2/pp-p2-7.jpg"
+          alt=""
+        />
       </div>
       <div className="w-full  top-0 absolute h-[50dvh] left-0"></div>
-      <div className=" px-[20px] flex flex-col gap-[10px] ">
-        <h1 className="text-[25px]  font-bold">Our love story</h1>
+      <div className=" px-[20px]  flex flex-col gap-[10px] ">
+        <div className="flex items-center ">
+          <span className="text-[25px] translate-y-1">Our love story</span>
+          <div className="w-[100px]">
+            <img
+              className="w-full object-contain h-full"
+              src="/images/love-animation.gif"
+              alt=""
+            />
+          </div>
+        </div>
         <p className="">
           Hing and Lady have known each other for many years as they grown up in
           the hometown, so on, they started to get close together as friends

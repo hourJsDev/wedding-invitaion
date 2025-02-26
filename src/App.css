@@ -137,3 +137,23 @@ body {
     transform: translateY(0);
   }
 }
+
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  top: 50%;
+  overflow-y: hidden;
+  transform: translate(0%, -50%);
+  user-select: none; /* Prevent image highlighting */
+  transition: all 1.2s ease-out;
+  white-space: nowrap;
+}
+
+#image-track > .image {
+  /* width: 40vmin;
+  height: 56vmin; */
+  object-fit: cover;
+  object-position: 100% center;
+  transition: all 1.2s ease-out;
+}

@@ -3,8 +3,8 @@ import agenda from "../db/agenda";
 const Timeline = () => {
   return (
     <div className="text-white flex flex-col gap-[20px] px-[10px]">
-      <h1 className="text-center fadeIn text-[25px] font-bold ">
-        តារាងកម្មវិធី
+      <h1 className="text-center fadeIn text-[25px]  ">
+        Timeline
       </h1>
       {agenda.map((ag) => (
         <div key={ag.text}>
@@ -17,9 +17,9 @@ const Timeline = () => {
                 className="flex fadeIn justify-between"
               >
                 <div
-                  className={`flex relative  items-center gap-[30px]`}
+                  className={`flex relative  items-center gap-[10px]`}
                 >
-                  {/* <div className="w-[10px] h-[10px] rounded-full bg-sky-400"></div> */}
+                  <div className="w-[10px] h-[10px] rounded-full bg-white"></div>
                   <span className="text-[15px]">{a.text}</span>
                 </div>
                 <span className="text-[14px]">{a.time}</span>

@@ -24,7 +24,7 @@ const Guest = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="flex relative  h-full bg-[#fff0e3] flex-col gap-[40px] items-center"
+      className="flex relative  h-[100dvh] bg-[#fff0e3] flex-col gap-[40px] items-center"
     >
       <div
         style={{

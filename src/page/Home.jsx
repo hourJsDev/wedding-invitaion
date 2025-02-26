@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import Image from "../component/Image";
+import Map from "./Map";
 import Timeline from "./Timeline";
 import OurStory from "./OurStory";
+import Gallery from "./Gallery";
 const Home = () => {
   return (
     <div className="flex flex-col gap-[50px]">
       <div
-        className="h-[100dvh] text-[white]"
+        className="h-[100dvh] uppercase text-[white]"
         style={{
           background:
             "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(/images/pp-p2/pp-p2-5.jpg)",
@@ -15,45 +17,19 @@ const Home = () => {
         }}
       >
         <div className="pt-[20px]">
-          <h1 className="text-center text-[white] text-[30px] font-bold">
-            OUR FAMILY
-          </h1>
-          <div className="flex px-[10px] justify-between">
-            <div>
-              <h2 className="text-[22px]">
-                <span className="text-[15px]">Father's name</span>
-                <br />
-                UON HO
-              </h2>
-              <h2 className="text-[22px]">
-                <span className="text-[15px]">Mother's name</span>
-                <br />
-                CHHUT SOKHOM
-              </h2>
-            </div>
-            <div className="text-right">
-              <h2 className="text-[22px]">
-                <span className="text-[15px]">Mother's name</span>
-                <br />
-                CHAN LAI
-              </h2>
-            </div>
-          </div>
-        </div>
-        <div className="pt-[20px]">
-          <h1 className="text-center text-[white] text-[25px] font-bold">
+          <h1 className="text-center text-[white] text-[25px] ">
             THE WEDDING OF
           </h1>
           <div className="flex px-[10px] justify-between">
             <div>
-              <h2 className="text-[22px]">
+              <h2 className="text-[18px]">
                 <span className="text-[15px]">Groom's name</span>
                 <br />
                 Nem Hing
               </h2>
             </div>
             <div className="text-right">
-              <h2 className="text-[22px]">
+              <h2 className="text-[18px]">
                 <span className="text-[15px]">Bride's name</span>
                 <br />
                 Houn Lady
@@ -61,6 +37,31 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="pt-[20px]">
+          <h1 className="text-center text-[white] text-[25px] ">OUR FAMILY</h1>
+          <div className="flex px-[10px] justify-between">
+            <div>
+              <h2 className="text-[18px]">
+                <span className="text-[15px]">Father's name</span>
+                <br />
+                UON HO
+              </h2>
+              <h2 className="text-[18px] mt-[10px]">
+                <span className="text-[15px]">Mother's name</span>
+                <br />
+                CHHUT SOKHOM
+              </h2>
+            </div>
+            <div className="text-right">
+              <h2 className="text-[18px]">
+                <span className="text-[15px]">Mother's name</span>
+                <br />
+                CHAN LAI
+              </h2>
+            </div>
+          </div>
+        </div>
+
         <div className="flex w-full absolute bottom-[200px] justify-center flex-col items-center gap-[10px]">
           <h2 className="text-[20px]">Save the date</h2>
           <Countdown />
@@ -73,11 +74,13 @@ const Home = () => {
         />
       </div>
       <Timeline />
-      <OurStory/>
+      <OurStory />
+      <Map />
+      <Gallery/>
     </div>
   );
 };
-const Countdown = ({ targetDate = "2025-03-01" }) => {
+const Countdown = ({ targetDate = "2025-03-15" }) => {
   const calculateTimeLeft = () => {
     const difference = new Date(targetDate) - new Date();
     if (difference <= 0) {
