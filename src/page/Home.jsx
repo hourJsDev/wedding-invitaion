@@ -4,6 +4,7 @@ import Map from "./Map";
 import Timeline from "./Timeline";
 import OurStory from "./OurStory";
 import Gallery from "./Gallery";
+import MessageForm from "../component/MessageForm";
 const Home = () => {
   return (
     <div className="flex fadeIn flex-col gap-[50px]">
@@ -77,8 +78,9 @@ const Home = () => {
       </div>
       <Timeline />
       <OurStory />
-      <Map />
       <Gallery />
+      <MessageForm/>
+      <Map />
     </div>
   );
 };

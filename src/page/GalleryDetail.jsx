@@ -27,14 +27,15 @@ const GalleryDetail = () => {
         </Link>
       </div>
       <div className="flex flex-col gap-[10px]">
-        {[...Array(images.length - 1).keys()].map((_, index) => (
+        {[...Array(images.length ).keys()].map((_, index) => (
           <div className="">
             <p className="text-white text-center mb-[10px]">
-              Photo No.{++index}
+              Photo No.{index + 1}
             </p>
             <Image
               className="w-full object-contain h-full"
-              src={`/images/${images.key}/${++index}.jpg`}
+              alt={`${images.key}/${index + 1}`}
+              src={`/images/${images.key}/${index + 1}.jpg`}
             />
           </div>
         ))}

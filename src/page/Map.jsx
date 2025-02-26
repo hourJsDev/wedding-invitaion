@@ -2,7 +2,7 @@ import React from "react";
 
 const Map = () => {
   return (
-    <div className="flex flex-col gap-[20px]">
+    <div className="flex pb-[30px] flex-col gap-[20px]">
       <div className="flex items-center justify-center">
         <img width={
           50

@@ -14,7 +14,6 @@ const Guest = () => {
       id = localStorage.getItem("uuid");
     }
     const selectedGuest = data.find((d) => d.uuid === id)?.name;
-    console.log(selectedGuest);
     setGuest(selectedGuest);
   }, []);
   return (

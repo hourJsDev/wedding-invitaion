@@ -8,7 +8,7 @@ const Gallery = () => {
       <h1 className="text-[30px] text-center">Gallery</h1>
       <div className="flex flex-col flex-wrap mt-[30px] gap-[30px] justify-between">
         {gallery.map((g, index) => (
-          <Link to={"/gallery/" + g.key}>
+          <Link key={index} to={"/gallery/" + g.key}>
             <div className="w-[300px] relative mx-auto h-[300px] fadeIn shadow-md ]  bg-white">
               <div className="w-full h-full  ">
                 <Image
