@@ -6,13 +6,15 @@ const Home = () => {
       className="h-[100dvh] text-[white]"
       style={{
         background:
-          "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/pp-p2/pp-p2-5.jpg)",
+          "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(/images/pp-p2/pp-p2-5.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       <div className="pt-[20px]">
-        <h1 className="text-center text-[white] text-[30px] font-bold">OUR FAMILY</h1>
+        <h1 className="text-center text-[white] text-[30px] font-bold">
+          OUR FAMILY
+        </h1>
         <div className="flex px-[10px] justify-between">
           <div>
             <h2 className="text-[22px]">
@@ -36,7 +38,9 @@ const Home = () => {
         </div>
       </div>
       <div className="pt-[20px]">
-        <h1 className="text-center text-[white] text-[25px] font-bold">THE WEDDING OF</h1>
+        <h1 className="text-center text-[white] text-[25px] font-bold">
+          THE WEDDING OF
+        </h1>
         <div className="flex px-[10px] justify-between">
           <div>
             <h2 className="text-[22px]">
@@ -61,6 +65,7 @@ const Home = () => {
       <img
         className="absolute pointer-events-none left-[50%] translate-x-[-50%] bottom-[10px]"
         src="/images/arrow.gif.gif"
+        width={60}
         alt=""
       />
     </div>
