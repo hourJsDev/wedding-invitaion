@@ -18,7 +18,7 @@ const Layout = () => {
     window.scrollTo({ behavior: "smooth", top: 0 });
   }, [location]);
   return (
-    <div className="h-[100dvh]">
+    <div>
       <Outlet />
       <ToTopButton />
       {/* <Navbar /> */}
