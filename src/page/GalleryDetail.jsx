@@ -27,8 +27,8 @@ const GalleryDetail = () => {
         </Link>
       </div>
       <div className="flex flex-col gap-[10px]">
-        {[...Array(images.length ).keys()].map((_, index) => (
-          <div className="">
+        {[...Array(images.length).keys()].map((_, index) => (
+          <div key={index} className="">
             <p className="text-white text-center mb-[10px]">
               Photo No.{index + 1}
             </p>
@@ -42,7 +42,7 @@ const GalleryDetail = () => {
       </div>
       {!!loading && (
         <div className="w-full  h-full fixed bg-[#001207] flex justify-center items-center top-0">
-          <span class="loader"></span>
+          <span className="loader"></span>
         </div>
       )}
     </div>
