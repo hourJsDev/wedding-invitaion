@@ -22,7 +22,7 @@ const ToTopButton = () => {
       onClick={handleClick}
       className="fixed cursor-pointer right-[5px] bottom-[100px] text-[30px]"
     >
-      <img className="rotate-180" width={80} src="/images/arrow.gif.gif" alt="" />
+      <img className="rotate-180" width={50} src="/images/arrow.gif.gif" alt="" />
     </div>
   ) : null;
 };

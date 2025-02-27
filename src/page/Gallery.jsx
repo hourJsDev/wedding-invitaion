@@ -22,6 +22,7 @@ const Gallery = () => {
                 <h2 className="text-[34px] ">{g.name}</h2>
                 <p className="text-[18px] ">{g.location}</p>
               </div>
+              <img width={100} src="/images/click-guide.gif" className="absolute pointer-events-none top-[-30px] right-[-30px]" alt="" />
             </div>
           </Link>
         ))}

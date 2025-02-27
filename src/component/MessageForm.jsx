@@ -18,7 +18,7 @@ function TelegramForm() {
         },
         {
           name: "Huon Lady",
-          id: "530458108",
+          id: "530458108", 
         },
         {
           name: "Pich Lyhour",
@@ -53,10 +53,11 @@ function TelegramForm() {
         onSubmit={handleSubmit}
       >
         <textarea
+
           placeholder="your wishes here"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="text-black p-[10px] text-[18px] outline-none h-[300px]"
+          className="bg-[#5c5c5c] text-white border border-white p-[10px] text-[18px] outline-none h-[300px]"
         ></textarea>
         <button className="border border-white p-[20px]" type="submit">
           SUBMIT
