@@ -1,6 +1,6 @@
 const gallery = [
   {
-    location: "Siam Riap",
+    location: "Siem Reap",
     name: "Outfits 1",
     key: "sr",
     length: 20,
