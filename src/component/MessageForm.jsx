@@ -5,24 +5,39 @@ function TelegramForm() {
   const botToken = "7216267918:AAGgMpWiMUutfknlDAHMPzcWI035WRFd2C4";
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const chatId = "1374380927";
-    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
     try {
       const selectedGuest = data.find(
         (d) => d.uuid === localStorage.getItem("uuid")
       )?.name;
       const date = new Date();
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const receivers = [
+        {
+          name: "Nem Hing",
+          id: "416003323",
         },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: `From ${selectedGuest}  \nMessage: ${message} \nSend Date: ${date.getDay()} / ${date.getMonth()} / ${date.getFullYear()}`,
-        }),
-      });
+        {
+          name: "Huon Lady",
+          id: "530458108",
+        },
+        {
+          name: "Pich Lyhour",
+          id: "1374380927",
+        },
+      ];
+      for (const r of receivers) {
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            chat_id: r.id,
+            text: `Dear ${r.name},  \n\nYou've got a wish from ${selectedGuest}:  \n\n\n ${message}\n\n`,
+          }),
+        });
+      }
       setMessage("");
       alert("Thank you for your wishes!");
     } catch (error) {

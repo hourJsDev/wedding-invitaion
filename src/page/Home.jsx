@@ -33,7 +33,7 @@ const Home = () => {
               <h2 className="text-[18px]">
                 <span className="text-[15px]">Bride's name</span>
                 <br />
-                Houn Lady
+                Huon Lady
               </h2>
             </div>
           </div>
@@ -65,7 +65,7 @@ const Home = () => {
 
         <div className="flex w-full absolute bottom-[200px] justify-center flex-col items-center gap-[10px]">
           <h2 className="text-[18px]">Save the date</h2>
-          <h2 className="text-[20px]">15th March 2025</h2>
+          <h2 className="text-[20px]">15th  | 16th March 2025</h2>
           <Countdown />
         </div>
         <img
@@ -79,7 +79,7 @@ const Home = () => {
       <Timeline />
       <OurStory />
       <Gallery />
-      <MessageForm/>
+      <MessageForm />
       <Map />
     </div>
   );
@@ -115,6 +115,7 @@ const Countdown = ({ targetDate = "2025-03-15" }) => {
             index < 3 &&
             "relative before:absolute before:w-[1px] before:bg-white before:h-[80%] before:top-0 before:right-0"
           }`}
+          key={index}
         >
           <span>{timeLeft[k]}</span>
           <span className="text-[10px]">{k}s</span>

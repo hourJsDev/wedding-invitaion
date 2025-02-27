@@ -36,9 +36,9 @@ const Guest = () => {
       <div className=" px-[20px] text-[white] absolute top-[50%]">
         <div className="relative">
           <h2 className="text-[28px]">
-            Welcom <br /> {guest}!{" "}
+            Dear, <br /> {guest}!{" "}
             <img
-              className="absolute top-[-30px] left-[80px]"
+              className="absolute top-[-30px] left-[40px]"
               src="/images/love-animation.gif"
               alt="sfsdf"
             />
