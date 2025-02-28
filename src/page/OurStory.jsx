@@ -34,7 +34,7 @@ const OurStory = () => {
           LOVE for them both in 25th November 2019. After four years together,
           they finished their love as boy/girlfriend degree to welcome another
           step as “Fiancées” as the Engagement was held officially in front of
-          the both families on 25th November 2025.{" "}
+          the both families on 25th November 2023.{" "}
         </p>
         <p>
           Not yet finished, as the words in the bible said “Love has never

@@ -10,7 +10,7 @@ const Layout = () => {
     <div>
       <Outlet />
       <ToTopButton />
-      {location.pathname !== "/" && (
+      {!["/", "/dashboard"].includes(location.pathname) && (
         <div className="text-white p-[20px]">
           &copy; Hing and Lady. All Rights Reserved.
         </div>

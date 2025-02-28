@@ -25,7 +25,7 @@ const Dashboard = () => {
     navigator.clipboard.writeText(text);
   };
   return (
-    <div className="h-full bg-[white] overflow-auto">
+    <div className="h-[100dvh] bg-[white] overflow-auto">
       <div className="w-[95%] bg-white sticky top-[0px] mx-auto py-[10px]">
         <input
           value={search}
@@ -44,7 +44,7 @@ const Dashboard = () => {
           : data
         ).map((d, index) => (
           <li
-            key={d.name}
+            key={index}
             className="flex hover:bg-slate-50 shadow-sm py-[10px] px-[10px] justify-between"
           >
             <span>{d.name}</span>

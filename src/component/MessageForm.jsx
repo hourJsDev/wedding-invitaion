@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import data from "../data";
 function TelegramForm() {
   const [message, setMessage] = useState("");
+  const [isThank, setIsThank] = useState(false);
   const botToken = "7216267918:AAGgMpWiMUutfknlDAHMPzcWI035WRFd2C4";
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (!message) return;
 
     try {
+      setIsThank(true);
       const selectedGuest = data.find(
         (d) => d.uuid === localStorage.getItem("uuid")
       )?.name;
-      const date = new Date();
       const receivers = [
         {
           name: "Nem Hing",
@@ -18,7 +20,7 @@ function TelegramForm() {
         },
         {
           name: "Huon Lady",
-          id: "530458108", 
+          id: "530458108",
         },
         {
           name: "Pich Lyhour",
@@ -38,8 +40,10 @@ function TelegramForm() {
           }),
         });
       }
-      setMessage("");
-      alert("Thank you for your wishes!");
+      setTimeout(() => {
+        setMessage("");
+        setIsThank(false);
+      }, 5000);
     } catch (error) {
       console.error("Error:", error);
     }
@@ -53,7 +57,6 @@ function TelegramForm() {
         onSubmit={handleSubmit}
       >
         <textarea
-
           placeholder="your wishes here"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -67,6 +70,11 @@ function TelegramForm() {
         <h2>ABA QRCODE</h2>
         <img width={200} src="/images/qr.png" alt="qr" />
       </div>
+      {!!isThank && (
+        <div className="w-full h-full flex justify-center items-center fixed top-0 left-0 bg-[#000000d6] ">
+          <img src="/images/thank.gif" width={"70%"} alt="" />
+        </div>
+      )}
     </div>
   );
 }
