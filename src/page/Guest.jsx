@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import data from "../data";
 import Image from "../component/Image";
 import { Link, useSearchParams } from "react-router";
+import { base64Decode } from "../helper";
 const Guest = () => {
   const [searchParams] = useSearchParams();
   const uuid = searchParams.get("uuid");
@@ -13,7 +14,8 @@ const Guest = () => {
     } else {
       id = localStorage.getItem("uuid");
     }
-    const selectedGuest = data.find((d) => d.uuid === id)?.name;
+    const selectedGuest =
+      data.find((d) => d.uuid === id)?.name || base64Decode(id);
     setGuest(selectedGuest);
   }, []);
   return (

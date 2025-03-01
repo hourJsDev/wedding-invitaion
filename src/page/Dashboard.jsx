@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import data from "../data";
 import { MdContentCopy } from "react-icons/md";
 import { FaRegCheckCircle } from "react-icons/fa";
+import { base64Encode } from "../helper";
 const Dashboard = () => {
   const [selected, setSelected] = useState("");
   const [search, setSearch] = useState("");
+  const [list, setList] = useState([]);
   const handleSelect = (uuid) => {
     setSelected(uuid);
     setTimeout(() => {
@@ -24,6 +26,20 @@ const Dashboard = () => {
 `;
     navigator.clipboard.writeText(text);
   };
+  useEffect(() => {
+    const cacheList = localStorage.getItem("list")
+      ? JSON.parse(localStorage.getItem("list"))
+      : [];
+    setList([...cacheList, ...data]);
+  }, []);
+  const handleAddNew = () => {
+    const cacheList = localStorage.getItem("list")
+      ? JSON.parse(localStorage.getItem("list"))
+      : [];
+    const guest = { name: search, uuid: base64Encode(search) };
+    localStorage.setItem("list", JSON.stringify([guest, ...cacheList]));
+    setList([guest, ...list]);
+  };
   return (
     <div className="h-[100dvh] bg-[white] overflow-auto">
       <div className="w-[95%] bg-white sticky top-[0px] mx-auto py-[10px]">
@@ -36,12 +52,21 @@ const Dashboard = () => {
           required
         />
       </div>
+      <div className="flex justify-end mx-[10px]">
+        <button
+          onClick={handleAddNew}
+          disabled={!search}
+          className={`bg-[#06002a]  rounded-sm text-white px-[10px] py-[7px]`}
+        >
+          Create New
+        </button>
+      </div>
       <ul className="flex w-[95%] mt-[30px] mx-auto flex-col gap-[10px]">
         {(search
-          ? data.filter((d) =>
+          ? list.filter((d) =>
               d.name.toLowerCase().includes(search.toLowerCase())
             )
-          : data
+          : list
         ).map((d, index) => (
           <li
             key={index}
