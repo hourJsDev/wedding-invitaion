@@ -39,6 +39,7 @@ const Dashboard = () => {
     const guest = { name: search, uuid: base64Encode(search) };
     localStorage.setItem("list", JSON.stringify([guest, ...cacheList]));
     setList([guest, ...list]);
+    setSearch("");
   };
   return (
     <div className="h-[100dvh] bg-[white] overflow-auto">
